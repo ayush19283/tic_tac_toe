@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tic-Tac-Toe.iml" filepath="$PROJECT_DIR$/.idea/modules/Tic-Tac-Toe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tic-Tac-Toe.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

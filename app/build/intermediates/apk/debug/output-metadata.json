@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.zero_cross",
+  "applicationId": "com.ayush.tic_tac_toe",
   "variantName": "debug",
   "elements": [
     {

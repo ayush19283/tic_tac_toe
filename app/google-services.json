@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1044854370426",
+    "project_id": "pushnotification-7ad56",
+    "storage_bucket": "pushnotification-7ad56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044854370426:android:783e32bc36eb79298acbc3",
+        "android_client_info": {
+          "package_name": "com.ayush.chattingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044854370426-mq5jm1uvlg9krn63mnc4rn1ap1ofkt2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAST5wrpunIZGkdtYEcNqQaSLqlszDRi2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044854370426-mq5jm1uvlg9krn63mnc4rn1ap1ofkt2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044854370426:android:90d8f0ea9ad7efce8acbc3",
+        "android_client_info": {
+          "package_name": "com.ayush.tic_tac_toe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044854370426-mq5jm1uvlg9krn63mnc4rn1ap1ofkt2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAST5wrpunIZGkdtYEcNqQaSLqlszDRi2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044854370426-mq5jm1uvlg9krn63mnc4rn1ap1ofkt2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
