@@ -2,6 +2,7 @@ package com.ayush.tic_tac_toe;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -20,6 +22,7 @@ import java.util.Set;
 
 public class online_gameActivity extends AppCompatActivity implements View.OnClickListener {
 
+    TextView match_info;
     String[] w1= {"zero_zero","zero_one","zero_two"};
     String[] w2 ={"one_zero","one_one","one_two"};
     String[] w3= {"two_zero","two_one","two_two"};
@@ -29,7 +32,8 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
     String[] w7={"zero_zero","one_one","two_two"};
     String[] w8={"zero_two","one_one","two_zero"};
 
-    Button clicked;
+    Button clicked,btn_restart;
+    TextView res;
 
     // List<String> w1=new ArrayList<String>();
     //w1.add()
@@ -52,6 +56,8 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_game);
+        match_info=findViewById(R.id.participants);
+        match_info.setText(Globals.username+" vs "+Globals.login_name);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -61,6 +67,9 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getResources().getColor(R.color.pink));
         }
+        Globals.text_result=findViewById(R.id.text_result);
+        Globals.finnall=findViewById(R.id.restart);
+
         Globals.b00=findViewById(R.id.zero_zero);
         Globals.b01=findViewById(R.id.zero_one);
         Globals.b02=findViewById(R.id.zero_two);
@@ -81,6 +90,12 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
         findViewById(R.id.two_one).setOnClickListener((View.OnClickListener) this);
         findViewById(R.id.two_two).setOnClickListener((View.OnClickListener) this);
 
+        Globals.finnall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(online_gameActivity.this,MainActivity.class));
+            }
+        });
 
         for (String v : w1) {
             wset1.add(v);
@@ -136,6 +151,7 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
                 Globals.message=s;
                 if (Globals.chance % 2 == 0 && Globals.priority.matches("1")) {
                     user1.add(s);
+                    System.out.println(" user 1  "+s);
                     new PostRequest().execute("https://fcm.googleapis.com/fcm/send");
                     clicked_button.setText("X");
                     Globals.chance++;
@@ -163,11 +179,19 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
                             }
                         }
                         System.out.println("winner user1");
+                        Globals.text_result.setText("winner is "+Globals.login_name);
+                        Globals.text_result.setVisibility(View.VISIBLE);
+                        Globals.finnall.setVisibility(View.VISIBLE);
+                        if(Globals.chance==9){
+                            Globals.text_result.setText("Match Draw");
+                        }
+
 
                     }
 
                 } else if(Globals.priority.matches("2") && Globals.chance%2!=0) {
                     user2.add(s);
+                    System.out.println("user2    "+s);
                     clicked_button.setText("0");
                     Globals.chance++;
                     new PostRequest().execute("https://fcm.googleapis.com/fcm/send");
@@ -220,6 +244,13 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
                             }
                         }
                         System.out.println("winner user2");
+                        Globals.text_result.setText("winner is "+Globals.login_name);
+                        Globals.text_result.setVisibility(View.VISIBLE);
+                        Globals.finnall.setVisibility(View.VISIBLE);
+
+                        if(Globals.chance==9){
+                            Globals.text_result.setText("Match Draw");
+                        }
 
                     }
 
@@ -230,7 +261,19 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
 
     }
 
-
+    public void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(online_gameActivity.this);
+        //   builder.setTitle("Safaricom");
+        builder.setMessage("Winner is "+Globals.login_name);
+        builder.setCancelable(false);
+        builder.setPositiveButton("RESTART", (dialog, which) -> {
+            //I want the String pin to be toasted on clicking the "YES" positive button
+            // Toast.makeText(this, Globals.username+" is winner", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(online_gameActivity.this,MainActivity.class));
+        }).setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
 
 
 }

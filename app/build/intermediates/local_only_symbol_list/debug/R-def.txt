@@ -30,12 +30,17 @@ id one_two
 id one_zero
 id online
 id participants
+id restart
+id submit
+id text_result
 id two_one
 id two_two
 id two_zero
+id username
 id zero_one
 id zero_two
 id zero_zero
+layout activity_login
 layout activity_main
 layout activity_online_game
 mipmap ic_launcher

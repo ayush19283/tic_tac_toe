@@ -1,6 +1,14 @@
 package com.ayush.tic_tac_toe;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import java.util.Map;
@@ -26,9 +34,11 @@ public class FirebaseMessagingReceiver extends FirebaseMessagingService {
             Globals.username=parts[0];
             Globals.token=parts[1];
             Globals.priority=parts[2];
+            Globals.res=1;
             Globals.searching=0;
         }else{
             Globals.chance++;
+            System.out.println(Globals.chance);
             Globals.opponent.add(text);
             Globals.demo.runOnUiThread(new Runnable() {
 
@@ -126,8 +136,54 @@ public class FirebaseMessagingReceiver extends FirebaseMessagingService {
 
             if (result1 || result2 || result3 || result4 || result5 || result6 || result7 || result8) {
                 System.out.println("opponent is winner");
+
+//                new Handler(Looper.getMainLooper()).post(new Runnable() {
+//
+//                    @Override
+//                    public void run() {
+//                        showDialog();
+//                      //  Toast.makeText(FirebaseMessagingReceiver.this.getApplicationContext(),"My Awesome service toast...",Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+                Globals.demo.runOnUiThread(new Runnable() {
+
+
+                    @Override
+                    public void run() {
+
+                        Globals.finnall.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(new Intent(FirebaseMessagingReceiver.this,MainActivity.class));
+                            }
+                        });
+                        Globals.text_result.setText("winner is "+Globals.username);
+                        Globals.text_result.setVisibility(View.VISIBLE);
+                        Globals.finnall.setVisibility(View.VISIBLE);
+
+                        if(Globals.chance==9){
+                            Globals.text_result.setText("Match Draw");
+                        }
+
+                    }
+                });
+            }
             }
         }
 
-        }
+
+    public void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //   builder.setTitle("Safaricom");
+        builder.setMessage("Winner is "+Globals.username);
+        builder.setCancelable(false);
+        builder.setPositiveButton("RESTART", (dialog, which) -> {
+            //I want the String pin to be toasted on clicking the "YES" positive button
+           // Toast.makeText(this, Globals.username+" is winner", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(FirebaseMessagingReceiver.this,MainActivity.class));
+        }).setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
+
+}

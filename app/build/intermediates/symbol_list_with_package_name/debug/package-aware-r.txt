@@ -2921,6 +2921,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id restart
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2987,6 +2988,7 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id supportScrollUp
 id tabMode
@@ -3017,6 +3019,7 @@ id textTop
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_result
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3047,6 +3050,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3162,6 +3166,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout activity_online_game
 layout custom_dialog

@@ -19,10 +19,29 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     TextView online;
+    String Token;
+    Database db=new Database(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiii         ");
+//        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(token -> {
+//            if (!TextUtils.isEmpty(token)) {
+//                Token=token;
+//                Log.d(TAG, "retrieve token successful : " + Token);
+//                new RequestTask2().execute(Globals.url+"/update/"+db.show()+"/"+token);
+//                System.out.println(token);
+//
+//            } else{
+//                Log.w(TAG, "token should not be null...");
+//            }
+//        }).addOnFailureListener(e -> {
+//        }).addOnCanceledListener(() -> {
+//        }).addOnCompleteListener(task -> Log.v(TAG, "This is the token : " + task.getResult()));
+        Globals.login_name=db.show();
+//        System.out.println("updating    "+Globals.url+"/update/"+db.show()+"/"+Token);
+
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -32,17 +51,6 @@ public class MainActivity extends AppCompatActivity {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getResources().getColor(R.color.green));
         }
-        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(token -> {
-            if (!TextUtils.isEmpty(token)) {
-
-                Log.d(TAG, "retrieve token successful : " + token);
-
-            } else{
-                Log.w(TAG, "token should not be null...");
-            }
-        }).addOnFailureListener(e -> {
-        }).addOnCanceledListener(() -> {
-        }).addOnCompleteListener(task -> Log.v(TAG, "This is the token : " + task.getResult()));
 
         Globals.demo=MainActivity.this;
         online=findViewById(R.id.online);
@@ -50,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Globals.searching=1;
+                new RequestTask2().execute(Globals.url+"/updateStatus/"+Globals.login_name+"/1");
 //                new GetRequest().execute(Globals.url+"/find");
                 Thread thread = new Thread() {
                     @Override
@@ -58,11 +67,13 @@ public class MainActivity extends AppCompatActivity {
                             while(true) {
                                 if(Globals.searching==1) {
                                     sleep(6000);
+
                                     new RequestTask2().execute(Globals.url + "/find");
                                     System.out.println(Globals.result + "   result global");
-                                    if (Globals.result.matches("game created")) {
+                                    if (Globals.res==1) {
                                         System.out.println(Globals.result + " balle balle");
                                         startActivity(new Intent(MainActivity.this, online_gameActivity.class));
+                                        Globals.res=0;
                                     }
                                 }
                             }

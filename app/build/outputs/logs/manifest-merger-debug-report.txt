@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ayush\.gradle\caches\transforms-3\8892c4b838347be490a6c21c8ebd71dd\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ayush\.gradle\caches\transforms-3\bc9ea81a4352abdeb992437608b03390\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\ayush\.gradle\caches\transforms-3\1cf32ee9fb82703435b60519b082d5e8\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
@@ -61,22 +61,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ayush\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ayush\.gradle\caches\transforms-3\c93007727e98a80e92f3c7183846bd7a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\ayush\.gradle\caches\transforms-3\fedac49a11fb9a99b79b5db5791f0340\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\ayush\.gradle\caches\transforms-3\3f196426bccb1443136fe949d5fe7954\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:4:5-36
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:2:11-69
@@ -105,7 +105,7 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\
 	android:name
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:9:5-44:19
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:9:5-51:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ayush\.gradle\caches\transforms-3\8892c4b838347be490a6c21c8ebd71dd\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\ayush\.gradle\caches\transforms-3\8892c4b838347be490a6c21c8ebd71dd\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ayush\.gradle\caches\transforms-3\bc9ea81a4352abdeb992437608b03390\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -164,54 +164,62 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ay
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:17:9-47
 	android:dataExtractionRules
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:11:9-65
-activity#com.ayush.tic_tac_toe.Find_user
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:19:9-21:40
+activity#com.ayush.tic_tac_toe.Login
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:19:9-28:20
 	android:exported
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:21:13-37
-	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:20:13-38
-activity#com.ayush.tic_tac_toe.online_gameActivity
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:22:9-25:40
-	android:exported
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:21:13-36
 	android:theme
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:24:13-60
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:22:13-60
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:23:13-48
-activity#com.ayush.tic_tac_toe.MainActivity
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:26:9-35:20
-	android:exported
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:28:13-36
-	android:theme
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:29:13-60
-	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:20:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:23:9-27:25
 action#android.intent.action.MAIN
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:24:13-65
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:24:21-62
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:26:13-73
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:33:27-74
-service#com.ayush.tic_tac_toe.FirebaseMessagingReceiver
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:36:9-43:19
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:26:23-70
+activity#com.ayush.tic_tac_toe.Find_user
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:30:13-38
+activity#com.ayush.tic_tac_toe.online_gameActivity
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:32:9-35:63
+	android:exported
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:34:13-37
+	android:theme
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:35:13-60
+	android:name
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:33:13-48
+activity#com.ayush.tic_tac_toe.MainActivity
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:36:9-41:20
 	android:exported
 		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:38:13-36
+	android:theme
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:39:13-60
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:37:13-54
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:37:13-41
+service#com.ayush.tic_tac_toe.FirebaseMessagingReceiver
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:43:9-50:19
+	android:exported
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:45:13-36
+	android:name
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:44:13-54
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT+action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:39:13-42:29
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:46:13-49:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:40:17-79
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:47:17-80
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:40:25-77
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:47:25-77
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:41:17-78
+ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:48:17-78
 	android:name
-		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:41:25-75
+		ADDED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml:48:25-75
 uses-sdk
 INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ayush\AndroidStudioProjects\TicTacToe\app\src\main\AndroidManifest.xml
