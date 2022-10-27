@@ -9,7 +9,16 @@
     android:paddingRight="10dp"
     tools:context=".MainActivity">
 
+  <Button
+    android:id="@+id/options"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:background="@drawable/three_dots"
+      app:layout_constraintLeft_toRightOf="@+id/title"
+      app:layout_constraintRight_toRightOf="parent"/>
+
   <TextView
+      android:id="@+id/title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="Tic Tac Toe"

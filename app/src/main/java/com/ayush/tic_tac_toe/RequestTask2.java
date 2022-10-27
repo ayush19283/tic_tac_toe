@@ -56,7 +56,6 @@ public class RequestTask2  extends AsyncTask<String, String, String> {
                 }
             }
             System.out.println("          fadsfaf res"+result.toString());
-            Globals.result=result.toString();
 //            Globals.token=result.toString();
 //            System.out.println(Globals.url+Globals.params);
 

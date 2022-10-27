@@ -76,7 +76,6 @@ public class GetRequest  extends AsyncTask<String, String, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         System.out.println("get request             fdf     "+result);
-        Globals.message=result;
 
     }
 

@@ -1,8 +1,10 @@
 package com.ayush.tic_tac_toe;
+import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 
 import org.json.JSONArray;
@@ -25,7 +27,7 @@ import java.nio.charset.StandardCharsets;
 
 public class PostRequest  extends AsyncTask<String, String, String> {
 
-
+    String token,marked_box;
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected String doInBackground(String... arg) {
@@ -34,9 +36,13 @@ public class PostRequest  extends AsyncTask<String, String, String> {
         int count = 0;
         int counter = 0;
         String s;
+
+        token=arg[1];
+        marked_box=arg[2];
         try {
             url = new URL(arg[0]);
-//              System.out.println(arg[0]);
+              System.out.println("token in post request  "+arg[1]+" extra "+arg[2]);
+
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -47,17 +53,18 @@ public class PostRequest  extends AsyncTask<String, String, String> {
 
             httpcon.setDoOutput(true);
             httpcon.setRequestProperty("Content-Type", "application/json");
-            httpcon.setRequestProperty("Authorization","key=your key\n");
+            httpcon.setRequestProperty("Authorization","key=AAAA80YscHo:APA91bH3eRx1cx8g54LtOrTkNzAXxiULNNUz7llT5_S9_XXLTQPSBxwkwlGojPnamB2XSE_8wkezbWWnfPE3NnhgPsjEz29QH5lMyvQIX49lIL_3ihv-UlJc1GnFdqNUnaeSQpPdkhCD\n");
             httpcon.setRequestMethod("POST");
             httpcon.connect();
+
 //            String notification_body;
 //            if(Globals.message.length()>10){
 //                notification_body=
 //            }
 //            Globals.message=Globals.message.replaceAll("\"", "\\\\\"");
-            byte[] outputBytes = ("{\"to\":\""+Globals.token+"\"," +
-                    "\"data\":{\"text\":\""+Globals.message+"\",\"sender\":\"gsdg\"}," +
-                    "\"notification\":{\"title\":\"opponent has marked\",\"body\":\""+Globals.message+"\",\"sound\":\"Tri-tone\"},"+
+            byte[] outputBytes = ("{\"to\":\""+token+"\"," +
+                    "\"data\":{\"text\":\""+marked_box+"\",\"title\":\"gsdg\"}," +
+                    "\"notification\":{\"title\":\"opponent has marked\",\"body\":\""+marked_box+"\",\"sound\":\"Tri-tone\"},"+
                     "\"priority\":\"high\"," +
                     "\"content_available\":true}").getBytes(StandardCharsets.UTF_8);
 

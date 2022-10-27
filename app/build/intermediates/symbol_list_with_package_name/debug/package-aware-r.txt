@@ -2563,6 +2563,7 @@ drawable notify_panel_notification_icon_bg
 drawable round_rectangle
 drawable test_custom_background
 drawable test_level_drawable
+drawable three_dots
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -2744,6 +2745,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextInput
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
@@ -2898,6 +2900,7 @@ id one_one
 id one_two
 id one_zero
 id online
+id options
 id outline
 id outward
 id overshoot
@@ -3185,6 +3188,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialogue_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

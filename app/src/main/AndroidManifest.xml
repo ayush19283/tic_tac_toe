@@ -27,9 +27,6 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".Find_user"
-            android:exported="false" />
-        <activity
             android:name=".online_gameActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />

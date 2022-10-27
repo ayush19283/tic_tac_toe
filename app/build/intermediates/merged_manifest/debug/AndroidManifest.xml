@@ -37,9 +37,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ayush.tic_tac_toe.Find_user"
-            android:exported="false" />
-        <activity
             android:name="com.ayush.tic_tac_toe.online_gameActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />

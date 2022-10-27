@@ -2,6 +2,7 @@ package com.ayush.tic_tac_toe;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -22,7 +23,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class Login extends AppCompatActivity {
     EditText get_Name;
     Button btn_login;
-    String text,Token;
+    String text,Token,log_name,url="https://747d-2409-4053-e09-205b-791c-b3b8-9746-22cd.in.ngrok.io";
     Database db=new Database(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +43,10 @@ public class Login extends AppCompatActivity {
             if (!TextUtils.isEmpty(token)) {
                 Token=token;
                 Log.d(TAG, "retrieve token successful : " + Token);
-                Globals.tok=token;
                 if(db.show().matches("nothing")){
                     System.out.println("bad bad    ");
                 }else{
                     new RequestTask2().execute(Globals.url+"/update/"+db.show()+"/"+token);
-                    Globals.login_name= db.show();
                     System.out.println("inside if");
                 }
 
@@ -70,12 +69,17 @@ public class Login extends AppCompatActivity {
                     if(text.matches("")){
                         Toast.makeText(Login.this,"username can not be empty",Toast.LENGTH_SHORT).show();
                     }else{
-                        Globals.login_name=text;
+                        log_name=text;
+
                         System.out.println("inserting   data     "+text);
                         db.insert(text);
 //                        System.out.println("tok tok token     "+Token);
-//                        new RequestTask2().execute(Globals.url+"/register/"+text+"/"+Token);
-                        startActivity(new Intent(Login.this, MainActivity.class));}
+                        new RequestTask2().execute(Globals.url+"/register/"+text+"/"+Token);
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        intent.putExtra("login_name", log_name);  // pass your values and retrieve them in the other Activity using keyName
+                        startActivity(intent);
+
+                    }
                 }
             });
 
@@ -85,4 +89,5 @@ public class Login extends AppCompatActivity {
         }
 
     }
+
 }
