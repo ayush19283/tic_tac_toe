@@ -53,7 +53,7 @@ public class PostRequest  extends AsyncTask<String, String, String> {
 
             httpcon.setDoOutput(true);
             httpcon.setRequestProperty("Content-Type", "application/json");
-            httpcon.setRequestProperty("Authorization","key=AAAA80YscHo:APA91bH3eRx1cx8g54LtOrTkNzAXxiULNNUz7llT5_S9_XXLTQPSBxwkwlGojPnamB2XSE_8wkezbWWnfPE3NnhgPsjEz29QH5lMyvQIX49lIL_3ihv-UlJc1GnFdqNUnaeSQpPdkhCD\n");
+            httpcon.setRequestProperty("Authorization","key=your key\n");
             httpcon.setRequestMethod("POST");
             httpcon.connect();
 
