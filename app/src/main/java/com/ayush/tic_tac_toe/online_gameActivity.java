@@ -45,7 +45,7 @@ import java.util.Set;
 public class online_gameActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView match_info,result;
-    int chance=0;
+    int chance=0,win=0;
     Button b00,b01,b02,b10,b11,b12,b20,b21,b22,restart_match;
     String priority,token,opponent_user,username,response,url;
     String[] w1= {"zero_zero","zero_one","zero_two"};
@@ -77,6 +77,8 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_online_game);
 
         match_info=findViewById(R.id.participants);
+        result=findViewById(R.id.text_result);
+        restart_match=findViewById(R.id.restart);
 
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -87,8 +89,7 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getResources().getColor(R.color.pink));
         }
-        result=findViewById(R.id.text_result);
-        restart_match=findViewById(R.id.restart);
+
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -290,9 +291,9 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
                         result.setText("winner is "+username);
                         result.setVisibility(View.VISIBLE);
                         restart_match.setVisibility(View.VISIBLE);
-
+                        win=1;
                     }
-                    if(chance==9){
+                    if(chance==9 && win==0){
                         result.setText("Match Draw");
                         result.setVisibility(View.VISIBLE);
                         restart_match.setVisibility(View.VISIBLE);
@@ -416,10 +417,11 @@ public class online_gameActivity extends AppCompatActivity implements View.OnCli
                         result.setText("winner is "+username);
                         result.setVisibility(View.VISIBLE);
                         restart_match.setVisibility(View.VISIBLE);
+                        win=1;
 
 
                     }
-                    if(chance==9){
+                    if(chance==9 && win==0){
                         result.setText("Match Draw");
                         result.setVisibility(View.VISIBLE);
                         restart_match.setVisibility(View.VISIBLE);

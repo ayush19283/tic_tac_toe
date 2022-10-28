@@ -34,7 +34,6 @@ public class FirebaseMessagingReceiver extends FirebaseMessagingService {
         Map<String, String> data = remoteMessage.getData();
         text= data.get("text"); //data received from fcm body i.e message
         opponent_details=data.get("title");
-        String a="b00";
         System.out.println(text+"     title title      "+opponent_details);
         if(opponent_details.matches("user details"))
         {
@@ -42,20 +41,36 @@ public class FirebaseMessagingReceiver extends FirebaseMessagingService {
             System.out.println(parts[0]+"   the splitted text  "+parts[1]+"     "+parts[2]);
             priority=parts[2];
             send_userDetails(parts[0],parts[1],parts[2]);
-        }else{
+        }else if(opponent_details.matches("custom game")){
+            String[] parts=text.split("-");
+            send_CustomGameDetails(parts[0],parts[1]);
+        }else if(opponent_details.matches("custom username")){
+            send_CustomGameUsername(text);
+        }
+        else{
             Intent intent = new Intent("MyData");
             intent.putExtra("response", text);
             broadcaster.sendBroadcast(intent);
-
             }
         }
 
     public void send_userDetails(String username,String token,String priority){
         Intent intent = new Intent("GPSLocationUpdates");
-        // You can also include some extra data.
         intent.putExtra("username", username);
         intent.putExtra("token",token);
         intent.putExtra("priority", priority);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+    }
+
+    public void send_CustomGameDetails(String username,String token){
+        Intent intent = new Intent("CustomGame");
+        intent.putExtra("username", username);
+        intent.putExtra("token",token);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+    }
+    public void send_CustomGameUsername(String username){
+        Intent intent = new Intent("CustomUsername");
+        intent.putExtra("username", username);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 }

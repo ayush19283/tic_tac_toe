@@ -12,6 +12,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,7 +28,7 @@ import android.widget.Toast;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-    TextView online;
+    TextView online,offline_play,play_custom;
     String Token,log_name,priority,token="",opponent_user,url="https://747d-2409-4053-e09-205b-791c-b3b8-9746-22cd.in.ngrok.io";
     Button forw_url;
     Database db=new Database(this);
@@ -58,53 +59,37 @@ public class MainActivity extends AppCompatActivity {
 
         forw_url=findViewById(R.id.options);
         online=findViewById(R.id.online);
+        offline_play=findViewById(R.id.offline);
+        play_custom=findViewById(R.id.friends);
         forw_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog();
             }
         });
+
+        offline_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                offline_play.setAlpha(0.1f);
+                startActivity(new Intent(MainActivity.this,offline_game.class));
+            }
+        });
+
         online.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Globals.searching=1;
+                online.setAlpha(0.1f);
                 new RequestTask2().execute(url+"/updateStatus/"+log_name+"/1");
                 new RequestTask2().execute(url + "/find");
-//                if(token.matches("")){
-//                    System.out.println("no user online");
-//                }else{
-//                    Intent intent = new Intent(MainActivity.this, online_gameActivity.class);
-//                    intent.putExtra("token", token);
-//                    intent.putExtra("priority",priority);
-//                    intent.putExtra("username",opponent_user);
-//                    startActivity(intent);
-//                }
-//                new GetRequest().execute(Globals.url+"/find");
-//                Thread thread = new Thread() {
-//                    @Override
-//                    public void run() {
-//                        try {
-//                            while(true) {
-//                                if(Globals.searching==1) {
-//                                    sleep(6000);
-//
-//                                    new RequestTask2().execute(Globals.url + "/find");
-//                                    System.out.println(Globals.result + "   result global");
-//                                    if (Globals.res==1) {
-//                                        System.out.println(Globals.result + " opening new activity game");
-//
-//                                        startActivity(new Intent(MainActivity.this, online_gameActivity.class));
-//                                        Globals.res=0;
-//                                    }
-//                                }
-//                            }
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                };
-//
-//                thread.start();
+            }
+        });
+
+        play_custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                play_custom.setAlpha(0.1f);
+                startActivity(new Intent(MainActivity.this,CustomGame.class));
             }
         });
     }

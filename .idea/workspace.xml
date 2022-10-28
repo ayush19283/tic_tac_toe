@@ -18,7 +18,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[MJ6DGA5T5HIRDIWK]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -63,7 +63,13 @@
     <key name="android.template.54641288">
       <recent name="com.ayush.tic_tac_toe" />
     </key>
+    <key name="android.template.-1979352723">
+      <recent name="com.ayush.tic_tac_toe" />
+    </key>
     <key name="android.template.-1224187957">
+      <recent name="com.ayush.tic_tac_toe" />
+    </key>
+    <key name="android.template.-488585013">
       <recent name="com.ayush.tic_tac_toe" />
     </key>
   </component>
@@ -198,5 +204,16 @@
       <updated>1665893758961</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ayush/tic_tac_toe/MainActivity.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

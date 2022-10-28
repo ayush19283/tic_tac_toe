@@ -2693,6 +2693,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id code
 id collapseActionView
 id compress
 id confirm_button
@@ -2703,8 +2704,10 @@ id contentPanel
 id contiguous
 id continuousVelocity
 id coordinator
+id copy_code
 id cos
 id counterclockwise
+id create
 id currentState
 id custom
 id customPanel
@@ -2785,6 +2788,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id heading
 id hideable
 id home
 id homeAsUp
@@ -2804,6 +2808,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id join
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2919,6 +2924,7 @@ id percent
 id pin
 id position
 id postLayout
+id proceed
 id progress_circular
 id progress_horizontal
 id radio
@@ -3034,6 +3040,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id token
 id top
 id topPanel
 id touch_outside
@@ -3169,9 +3176,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_custom_game
 layout activity_login
 layout activity_main
+layout activity_offline_game
 layout activity_online_game
+layout activity_play_with_friend
+layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
